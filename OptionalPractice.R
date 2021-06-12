@@ -1,3 +1,13 @@
+install.packages("devtools")
+devtools::install_github("jhudsl/collegeIncome")
+library(collegeIncome)
+data(college)
+
+devtools::install_github("jhudsl/matahari")
+library(matahari)
+
+dance_start(value = FALSE, contents = FALSE)
+
 
 str(college)
 summary(college)
@@ -33,3 +43,5 @@ sum_fit_p75th <- summary(fit_p75th)
 sum_fit_p75th
 par(mfrow = c(2,2))
 plot(fit_median)
+
+dance_save("college_major_analysis.rds")
